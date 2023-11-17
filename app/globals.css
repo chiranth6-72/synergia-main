@@ -13,52 +13,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.carousel .slide img {
-  @apply h-full w-full object-cover;
-}
-
-.carousel .slide {
-  @apply bg-transparent;
-}
-
-.carousel.carousel-slider .control-arrow {
-  @apply flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors duration-200;
-  top: 50%; /* Center the buttons vertically */
-}
-
-.carousel.carousel-slider .control-arrow:hover {
-  @apply bg-blue-500;
-}
-
-.carousel .control-dots {
-  @apply justify-center;
-}
-
-.carousel .control-dots .dot {
-  @apply bg-gray-400;
-}
-
-.carousel .control-dots .dot.selected {
-  @apply bg-blue-500;
-}
-
-.carousel .thumbs-wrapper {
-  @apply justify-center; /* Center the thumbnails */
-}
-
-.carousel .thumb {
-  @apply border-2 border-gray-300;
-}
-
-.carousel .thumb.selected,
-.carousel .thumb:hover {
-  @apply border-blue-500;
-}
-
-.carousel-root {
-  @apply mx-auto max-w-lg;
-}
-
 .slideIn {
   animation: slideIn 0.9s ease-in both;
 }
@@ -66,7 +20,7 @@
 @keyframes slideIn {
   0% {
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(200px);
   }
   100% {
     opacity: 1;
@@ -89,7 +43,7 @@
 
 .fadeOutBtn {
   animation: fadeBtn 0.5s ease both;
-  animation-delay: 1s;
+  animation-delay: .7s;
 }
 @keyframes fadeBtn {
   0% {

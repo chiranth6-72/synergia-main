@@ -4,48 +4,68 @@ import { FaInstagram, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row gap-5 items-center justify-between border-t border-primary-white border-opacity-20  px-[7rem] py-5">
-      {/* LOGO */}
-      <Link href={"#top"} className="">
-        <img className="w-[10rem] " src="/images/logo_black.png" alt="logo" />
-      </Link>
-
-      {/* CONTACT INFO */}
-      <div className="flex flex-col items-start gap-y-2">
-        <p className="text-md font-medium capitalize text-primary-black tracking-wide">
-          Contact us
-        </p>
-        <p className="text-sm text-primary-black">Prajwal P : +91 9480382738</p>
-        <p className="text-sm text-primary-black">
-          Vishnu Pradeep: +91 9449845944
-        </p>
-        <p className="text-sm text-primary-black">Email: Synergia@sahyadri.edu.in</p>
-      </div>
-
-      {/* ADDRESS */}
-
-      <div className="">
-        <p className="text-md font-medium capitalize text-primary-black tracking-wide">
-          Address </p>
-        <p className="text-sm text-primary-black">Sahyadri Campus, Adyar,</p>
-        <p className="text-sm text-primary-black">Mangaluru,Karnataka 575007</p>
-      </div>
-
-      {/* SOCIAL MEDIA ICONS */}
-      <div className="flex items-center justify-start gap-x-5">
-        <Link href="/" className="rounded-md bg-primary-green p-2">
-          <FaInstagram className="text-xl font-bold text-primary-black" />
+    <>
+      <footer className="flex flex-col justify-between gap-5 border-t border-primary-white border-opacity-20 px-[7rem]  py-10 md:flex-row">
+        {/* LOGO */}
+        <Link href={"#top"} className="">
+          <img className="w-[10rem] " src="/images/logo_white.png" alt="logo" />
         </Link>
 
-        <Link href="/" className="rounded-md bg-primary-green p-2">
-          <FaFacebookSquare className="text-xl font-bold text-primary-black" />
-        </Link>
+        {/* CONTACT INFO */}
+        <div className="flex flex-col items-start gap-y-4">
+          <h3 className="text-xl font-medium capitalize tracking-wide text-primary-black ">
+            Contact us
+            <div className="mx-auto h-[1px] w-[92%] bg-primary-white" />
+          </h3>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-sm text-primary-black">
+              Prajwal P : +91 9480382738
+            </p>
+            <p className="text-sm text-primary-black">
+              Vishnu Pradeep: +91 9449845944
+            </p>
+            <p className="text-sm text-primary-black">
+              Email: Synergia@sahyadri.edu.in
+            </p>
+          </div>
+        </div>
 
-        <Link href="/" className="rounded-md bg-primary-green p-2">
-          <FaLinkedin className="text-xl font-bold text-primary-black" />
-        </Link>
+        {/* ADDRESS */}
+
+        <div className="flex flex-col items-start gap-y-4">
+          <h3 className="text-xl font-medium capitalize tracking-wide text-primary-black">
+            Address <div className="mx-auto h-[1px] w-[92%] bg-primary-white" />
+          </h3>
+          <div className="flex flex-col gap-y-1">
+            <p className="text-sm text-primary-black">
+              Sahyadri Campus, Adyar,
+            </p>
+            <p className="text-sm text-primary-black">
+              Mangaluru,Karnataka 575007
+            </p>
+          </div>
+        </div>
+
+        {/* SOCIAL MEDIA ICONS */}
+        <div className="flex items-center justify-start gap-x-5">
+          <Link href="https://instagram.com/synergia_sahyadri?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" className="rounded-md bg-primary-green p-2">
+            <FaInstagram className="text-xl font-bold text-primary-black" />
+          </Link>
+
+          <Link href="/" className="rounded-md bg-primary-green p-2">
+            <FaFacebookSquare className="text-xl font-bold text-primary-black" />
+          </Link>
+
+          <Link href="/" className="rounded-md bg-primary-green p-2">
+            <FaLinkedin className="text-xl font-bold text-primary-black" />
+          </Link>
+        </div>
+      </footer>
+      <div className="border-t border-primary-white border-opacity-30 py-3 text-center text-primary-white">
+        {" "}
+        ©️ Copyright 2023 - Synergia
       </div>
-    </footer>
+    </>
   );
 };
 

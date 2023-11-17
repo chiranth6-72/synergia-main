@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
-  const sections = ["Home", "Events", "Schedule", "Gallery"];
+  const sections = ["Home", "Events", "Gallery"];
 
   const handleClick = () => {
     setIsOpen(!isOpen);

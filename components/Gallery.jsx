@@ -29,12 +29,14 @@ const Gallery = () => {
   }, [currentImageIndex, hover]);
 
   return (
-    <main id="Gallery" className="">
+    <main
+      id=""
+      className="bg-opacity-10 bg-[url('/bg/GALLERY_bg_vector.png')] bg-cover bg-center bg-no-repeat"
+    >
       <Header num_={"03"} heading_={"gallery"} />
-      
-      
+
       <section className="relative h-screen">
-        <div className="relative mx-auto my-10 flex h-[70%] w-[90%] md:w-[50%]  items-center justify-center ">
+        <div className="relative mx-auto my-10 flex h-[70%] w-[90%] items-center  justify-center md:w-[50%] ">
           <div
             className="absolute h-full w-full cursor-pointer overflow-hidden rounded-lg shadow-sm"
             onMouseOver={() => setHover(true)}

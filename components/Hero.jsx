@@ -52,8 +52,8 @@ const Hero = () => {
   }, [toggle]);
 
   return (
-    <div className="duration-400 relative flex h-screen flex-col items-center justify-center gap-y-10 font-red-hat-display text-primary-white transition-all ">
-      <button
+    <div className="duration-400 relative flex h-screen flex-col items-center justify-center gap-y-10 bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat font-red-hat-display text-primary-white transition-all">
+      {/* <button
         className="duration-400 absolute left-5 top-[40%]  rounded-full p-3 transition-all hover:bg-slate-300 hover:bg-opacity-30"
         onClick={() => {
           changeSlide("prev");
@@ -72,7 +72,7 @@ const Hero = () => {
       </button>
 
       <div
-        className=" flex h-full w-full flex-col items-center justify-center gap-y-6 bg-black "
+        className=" flex h-full w-full flex-col items-center justify-center gap-y-6 "
         key={currentIndex}
       >
         <h1 className="slideIn mt-[-6rem] text-center text-6xl font-bold capitalize tracking-wider transition-all duration-500 md:text-9xl">
@@ -83,13 +83,12 @@ const Hero = () => {
         </p>
         <h1>{data[currentIndex].desc}</h1>
         <button
-          className="fadeOutBtn 
- bg-primary-green px-10 py-2 font-semibold capitalize tracking-wider text-primary-black "
+          className="fadeOutBtn bg-primary-green px-10 py-2 font-semibold capitalize tracking-wider text-primary-black "
           key={currentIndex}
         >
           Explore{" "}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -15,6 +15,7 @@ export default function Home() {
       <Date />
       <div id="Events" className="h-[2rem]"></div>
       <Event />
+      <div id="Gallery" className="h-[2rem]"></div>
       <Gallery />
       <Footer />
       {/* <Card /> */}
