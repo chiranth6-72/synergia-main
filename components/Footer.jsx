@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex items-center justify-between border-t border-primary-white border-opacity-20  px-[7rem] py-5">
+    <footer className="flex flex-col md:flex-row gap-5 items-center justify-between border-t border-primary-white border-opacity-20  px-[7rem] py-5">
       {/* LOGO */}
       <Link href={"#top"} className="">
         <img className="w-[10rem] " src="/images/logo_black.png" alt="logo" />

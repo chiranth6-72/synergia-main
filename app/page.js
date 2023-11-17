@@ -13,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Date />
+      <div id="Events" className="h-[2rem]"></div>
       <Event />
       <Gallery />
       <Footer />

@@ -3,31 +3,29 @@ import { events } from "@/data/eventData";
 import Header from "./helper/Header";
 import Link from "next/link";
 import { GoLinkExternal } from "react-icons/go";
+import Image from "next/image";
 
 const Event = () => {
   return (
-    <main>
-      <section id="Events">
+    <main className="">
+      
         <Header num_={"01"} heading_={"events"} />
-      </section>
+      
 
-      <section className="relative flex h-screen flex-col items-center justify-center gap-4 p-5 md:flex-row">
+      <section className="relative flex h-full flex-col items-center justify-center gap-4 p-5 md:flex-row ">
         {events.map((event, index) => (
-          <div
-            key={index}
-            className="group relative h-64 overflow-hidden "
-          >
+          <div key={index} className="group relative h-64 overflow-hidden rounded-sm">
             <img
               src={event.img_}
               alt="event_img"
-              className="w-full -translate-y-7 object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
+              className="h-64 w-full  object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75 "
             />
             <Link
               href={event.link_}
               target="_blank"
-              className="absolute inset-0 flex items-end my-5 justify-center font-work-sans text-xl font-semibold uppercase tracking-wide opacity-0 transition-all duration-500 group-hover:opacity-100 "
+              className="absolute inset-0 left-0 top-0 my-5 flex h-full w-full items-end justify-center font-work-sans  text-xl font-semibold tracking-wide opacity-0 transition-all duration-500 group-hover:opacity-100"
             >
-              <h3 className=" w-full bg-transparent py-3 text-center text-primary-green ">
+              <h3 className=" mb-8 w-full bg-transparent py-3 text-center capitalize text-primary-green text-opacity-90">
                 Visit <GoLinkExternal className="inline-block pl-1" />
               </h3>
             </Link>

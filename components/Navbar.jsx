@@ -96,7 +96,7 @@ const Navbar = () => {
           initial={{ height: 0 }}
           animate={isOpen ? { height: "" } : { height: 0 }} // replace 500px with the actual height of your dropdown menu
           transition={{ duration: 0.6, ease: [0.04, 0.62, 0.23, 0.98] }}
-          className="flex w-full origin-top transform flex-col justify-center gap-3 overflow-hidden bg-primary-black text-2xl text-primary-white md:hidden"
+          className="flex min-w-full origin-top transform flex-col justify-center gap-y-3 overflow-hidden bg-transparent bg-opacity-30 text-2xl text-primary-white backdrop-blur-md backdrop-filter md:hidden"
         >
           {sections.map((section, index) => (
             <Link

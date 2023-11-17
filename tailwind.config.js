@@ -13,6 +13,7 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "event-bg": "url('/images/bg/event.png')",
       },
       fontFamily: {
         "work-sans": ["Work Sans", "Helvetica", "sans-serif"],
@@ -46,12 +47,21 @@ module.exports = {
             width: "6%",
           },
         },
+        "slide-in": {
+          "0%": {
+            transform: "translateY(10rem) opacity(0)",
+          },
+          "100%": {
+            transform: "translateY(0) opacity(1)",
+          },
+        },
       },
       animation: {
         open: "open 0.5s linear forwards",
         close: "close 0.5s linear forwards",
         "rotate-scale-up-ver": "rotate-scale-up 0.65s linear both",
         grow: "grow 1s linear forwards",
+        "slide-in-bt-nodelay": "slide-in 0.5s linear both",
       },
 
       colors: {

@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const Date = () => {
   return (
     <>
-      <section className="flex w-full flex-col items-center justify-center gap-2 bg-primary-green pb-5 pt-8 text-primary-black">
+      <section className="flex w-full flex-col text-center items-center justify-center gap-2 bg-primary-green pb-5 pt-8 text-primary-black">
         <motion.h2
-          className="font-work-sans text-7xl font-extrabold uppercase tracking-tight"
+          className="font-work-sans text-5xl md:text-7xl font-extrabold uppercase tracking-tight"
           initial={{ opacity: 0, y: 75 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -17,7 +17,7 @@ const Date = () => {
           december 7-9
         </motion.h2>
         <motion.h3
-          className="font-red-hat-display text-2xl font-semibold capitalize "
+          className="font-red-hat-display text-xl md:text-2xl font-semibold capitalize "
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
