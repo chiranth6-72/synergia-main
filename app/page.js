@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Schedule from "@/components/Schedule";
 import Gallery from "@/components/Gallery";
+import ShiftingCountdown from "@/components/Counter";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Event />
       <div id="Gallery" className="h-[2rem]"></div>
       <Gallery />
+      <ShiftingCountdown />
       <Footer />
       {/* <Card /> */}
       {/* <Schedule /> */}

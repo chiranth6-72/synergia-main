@@ -43,7 +43,7 @@ const Navbar = () => {
         className={`${
           scrolled
             ? "relative top-0 bg-opacity-30 backdrop-blur-md backdrop-filter md:fixed md:bg-transparent md:transition-all md:duration-[0.7s]"
-            : "relative bg-transparent "
+            : "relative md:fixed bg-transparent bg-opacity-30 backdrop-blur-md backdrop-filter"
         } z-[100] w-full px-5 font-semibold text-primary-white transition-all duration-[0.7s]`}
       >
         <div
