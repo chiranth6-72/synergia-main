@@ -30,13 +30,13 @@ module.exports = {
         },
         "rotate-scale-up": {
           "0%": {
-            transform: "scale(1) rotateY(0) opacity(0)",
+            transform: " opacity(0)",
           },
           "50%": {
-            transform: "scale(1) rotateY(180deg) ",
+            transform: "opacity(0.5) ",
           },
           "100%": {
-            transform: "scale(1) rotateY(360deg) opacity(1)",
+            transform: "opacity(1)",
           },
         },
         grow: {
@@ -47,21 +47,12 @@ module.exports = {
             width: "6%",
           },
         },
-        "slide-in": {
-          "0%": {
-            transform: "translateY(10rem) opacity(0)",
-          },
-          "100%": {
-            transform: "translateY(0) opacity(1)",
-          },
-        },
       },
       animation: {
         open: "open 0.5s linear forwards",
         close: "close 0.5s linear forwards",
-        "rotate-scale-up-ver": "rotate-scale-up 0.65s linear both",
+        "rotate-scale-up-ver": "rotate-scale-up 1s linear both",
         grow: "grow 1s linear forwards",
-        "slide-in-bt-nodelay": "slide-in 0.5s linear both",
       },
 
       colors: {

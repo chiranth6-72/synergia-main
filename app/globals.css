@@ -58,3 +58,44 @@
 .carousel-root {
   @apply mx-auto max-w-lg;
 }
+
+.slideIn {
+  animation: slideIn 0.9s ease-in both;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.slideInDelay {
+  animation: slideInDelay 0.5s 0.4s linear both;
+}
+@keyframes slideInDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeOutBtn {
+  animation: fadeBtn 0.5s ease both;
+  animation-delay: 1s;
+}
+@keyframes fadeBtn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
