@@ -13,20 +13,14 @@ const Footer = () => {
 
         {/* CONTACT INFO */}
         <div className="flex flex-col items-start gap-y-4">
-          <h3 className="text-xl font-medium capitalize tracking-wide text-primary-black ">
+          <h3 className="text-xl font-medium capitalize tracking-wide text-primary-black text-center">
             Contact us
             <div className="mx-auto h-[1px] w-[92%] bg-primary-white" />
           </h3>
-          <div className="flex flex-col gap-y-2">
-            <p className="text-sm text-primary-black">
-              Prajwal P : +91 9480382738
-            </p>
-            <p className="text-sm text-primary-black">
-              Vishnu Pradeep: +91 9449845944
-            </p>
-            <p className="text-sm text-primary-black">
-              Email: Synergia@sahyadri.edu.in
-            </p>
+          <div className="flex flex-col gap-y-2 text-sm text-primary-black text-opacity-90">
+            <p className="">Prajwal P : +91 9480382738</p>
+            <p className="">Vishnu Pradeep: +91 9449845944</p>
+            <p className="">Email: Synergia@sahyadri.edu.in</p>
           </div>
         </div>
 
@@ -36,19 +30,19 @@ const Footer = () => {
           <h3 className="text-xl font-medium capitalize tracking-wide text-primary-black">
             Address <div className="mx-auto h-[1px] w-[92%] bg-primary-white" />
           </h3>
-          <div className="flex flex-col gap-y-1">
-            <p className="text-sm text-primary-black">
-              Sahyadri Campus, Adyar,
-            </p>
-            <p className="text-sm text-primary-black">
-              Mangaluru,Karnataka 575007
-            </p>
+          <div className="flex flex-col gap-y-1 text-sm text-primary-black text-opacity-90">
+            <p className="">Sahyadri Campus, Adyar,</p>
+            <p className="">Mangaluru,Karnataka 575007</p>
           </div>
         </div>
 
         {/* SOCIAL MEDIA ICONS */}
         <div className="flex items-center justify-start gap-x-5">
-          <Link href="https://instagram.com/synergia_sahyadri?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" className="rounded-md bg-primary-green p-2">
+          <Link
+            href="https://instagram.com/synergia_sahyadri?igshid=OGQ5ZDc2ODk2ZA=="
+            target="_blank"
+            className="rounded-md bg-primary-green p-2"
+          >
             <FaInstagram className="text-xl font-bold text-primary-black" />
           </Link>
 

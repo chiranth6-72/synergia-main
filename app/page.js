@@ -18,7 +18,6 @@ export default function Home() {
       <Event />
       <div id="Gallery" className="h-[2rem]"></div>
       <Gallery />
-      <ShiftingCountdown />
       <Footer />
       {/* <Card /> */}
       {/* <Schedule /> */}

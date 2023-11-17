@@ -40,11 +40,13 @@ const Navbar = () => {
       <header
         id="top"
         ref={headerRef}
-        className={`${
-          scrolled
-            ? "relative top-0 bg-opacity-30 backdrop-blur-md backdrop-filter md:fixed md:bg-transparent md:transition-all md:duration-[0.7s]"
-            : "relative md:fixed bg-transparent bg-opacity-30 backdrop-blur-md backdrop-filter"
-        } z-[100] w-full px-5 font-semibold text-primary-white transition-all duration-[0.7s]`}
+        className="relative top-0 z-[100] w-full bg-opacity-30 px-5 font-semibold text-primary-white backdrop-blur-md backdrop-filter transition-all duration-[0.7s] md:fixed md:bg-transparent md:transition-all md:duration-[0.7s]"
+
+        // className={`${
+        //   scrolled
+        //     ? "relative top-0 bg-opacity-30 backdrop-blur-md backdrop-filter md:fixed md:bg-transparent md:transition-all md:duration-[0.7s]"
+        //     : "relative md:fixed bg-transparent bg-opacity-30 backdrop-blur-md backdrop-filter"
+        // } z-[100] w-full px-5 font-semibold text-primary-white transition-all duration-[0.7s]`}
       >
         <div
           className={`mx-auto flex w-[92%] items-center justify-between p-2`}
