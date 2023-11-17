@@ -142,15 +142,21 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
   const slide = slides[currentIndex];
 
-  const goPrev = () =>
+  const goPrev = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + slides.length) % slides.length,
     );
-  const goNext = () =>
+    setDirection(-1);
+  };
+
+  const goNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setDirection(1);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -160,16 +166,37 @@ const Hero = () => {
     return () => clearInterval(timer); // Clean up on component unmount
   }, [goPrev, goNext]);
 
+  const variants = {
+    enter: (direction) => {
+      return {
+        x: direction > 0 ? 1000 : -1000,
+        opacity: 0,
+      };
+    },
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => {
+      return {
+        zIndex: 0,
+        x: direction < 0 ? 1000 : -1000,
+        opacity: 0,
+      };
+    },
+  };
+
   return (
-    <div className="relative flex h-screen flex-col items-center justify-center gap-y-10 font-red-hat-display text-primary-white transition-all duration-500">
+    <div className="relative flex h-screen flex-col items-center justify-center gap-y-10 font-red-hat-display text-primary-white transition-all duration-400">
       <button
-        className="absolute left-5 top-[40%] rounded-full p-3 transition-all duration-500 hover:bg-slate-300 hover:bg-opacity-30"
+        className="absolute left-5 top-[40%] rounded-full p-3 transition-all duration-400 hover:bg-slate-300 hover:bg-opacity-30"
         onClick={goPrev}
       >
         <FaArrowLeft className="text-2xl opacity-70" />
       </button>
       <button
-        className="absolute right-5 top-[40%] rounded-full p-3 transition-all duration-500 hover:bg-slate-300 hover:bg-opacity-30"
+        className="absolute right-5 top-[40%] rounded-full p-3 transition-all duration-400 hover:bg-slate-300 hover:bg-opacity-30"
         onClick={goNext}
       >
         <FaArrowRight className="text-2xl opacity-70" />
@@ -177,27 +204,30 @@ const Hero = () => {
       <AnimatePresence mode="wait">
         <motion.h1
           className="text-center text-9xl font-bold capitalize tracking-wider transition-all duration-500"
+          key={`p-${currentIndex}`}
           initial={{ opacity: 0, y: 75 }}
           animate={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeInOut", delay: 0.3 }}
         >
           {slide.h_}
         </motion.h1>
         <motion.p
-          className="w-[35%] text-center tracking-wide text-xl font-medium transition-all duration-500"
+          className="w-[35%] text-center text-xl font-medium tracking-wide transition-all duration-500"
+          key={`p-${currentIndex}`}
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeInOut", delay: 0.4 }}
         >
           {slide.p_}
         </motion.p>
         <motion.button
           className="bg-primary-green px-10 py-2 font-semibold capitalize tracking-wider text-primary-black transition-all duration-500"
+          key={`p-${currentIndex}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeInOut", delay: 0.9 }}
         >
           Explore

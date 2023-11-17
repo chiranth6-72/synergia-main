@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { images } from "@/data/imgData";
 import Header from "./helper/Header";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 
 const Gallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,7 +29,7 @@ const Gallery = () => {
   }, [currentImageIndex, hover]);
 
   return (
-    <main id="Gallery" className="border-t border-red-600 top-10">
+    <main id="Gallery" className="">
       <Header num_={"03"} heading_={"gallery"} />
       <section className="relative h-screen">
         <div className="relative mx-auto my-10 flex h-[70%] w-[50%] items-center justify-center ">
@@ -38,7 +39,9 @@ const Gallery = () => {
             onMouseOut={() => setHover(false)}
           >
             {images.map((image, index) => (
-              <img
+              <Image
+                width={500}
+                height={500}
                 key={index}
                 className={`absolute h-full w-full object-cover transition-all duration-500 ${
                   index === currentImageIndex ? "opacity-100" : "opacity-0"

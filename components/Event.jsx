@@ -15,7 +15,7 @@ const Event = () => {
         {events.map((event, index) => (
           <div
             key={index}
-            className="group relative h-64 overflow-hidden bg-red-300"
+            className="group relative h-64 overflow-hidden "
           >
             <img
               src={event.img_}
