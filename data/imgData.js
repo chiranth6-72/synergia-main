@@ -1,0 +1,15 @@
+export const images = [
+  "/gallery/img_1.jpg",
+  "/gallery/img_2.jpg",
+  "/gallery/img_3.jpg",
+  "/gallery/img_4.jpg",
+  "/gallery/img_5.jpg",
+  "/gallery/img_6.jpg",
+  "/gallery/img_7.jpg",
+  "/gallery/img_8.jpg",
+  "/gallery/img_9.jpg",
+  "/gallery/img_10.jpg",
+  "/gallery/img_11.jpg",
+  "/gallery/img_12.jpg",
+  "/gallery/img_13.jpg",
+];
