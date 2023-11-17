@@ -53,7 +53,7 @@ const Hero = () => {
   }, [toggle]);
 
   return (
-    <main className="relative">
+    <main id="Home" className="relative">
       <div className="duration-400 relative flex h-screen flex-col items-center justify-center gap-y-10 bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat font-red-hat-display text-primary-white transition-all">
         {/* <button
         className="duration-400 absolute left-5 top-[40%]  rounded-full p-3 transition-all hover:bg-slate-300 hover:bg-opacity-30"
