@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { images } from "@/data/imgData";
 import Header from "./helper/Header";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import { RefContext } from "@/context/RefContext";
 
 const Gallery = () => {
+  const { galleryRef } = useContext(RefContext);
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [hover, setHover] = useState(false);
 
@@ -33,7 +36,8 @@ const Gallery = () => {
       id=""
       className="bg-opacity-10 bg-[url('/bg/GALLERY_bg_vector.png')] bg-cover bg-center bg-no-repeat"
     >
-      <Header num_={"03"} heading_={"gallery"} />
+      <div id="Gallery" ref={galleryRef} className="h-[2rem]" />
+      <Header num_={"02"} heading_={"gallery"} />
 
       <section className="relative h-screen">
         <div className="relative mx-auto my-10 flex h-[70%] w-[90%] items-center  justify-center md:w-[50%] ">

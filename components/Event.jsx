@@ -1,20 +1,26 @@
-import React from "react";
+"use client";
+
 import { events } from "@/data/eventData";
 import Header from "./helper/Header";
 import Link from "next/link";
 import { GoLinkExternal } from "react-icons/go";
-import Image from "next/image";
+import { RefContext } from "@/context/RefContext";
+import { useContext } from "react";
 
 const Event = () => {
+  const { eventRef } = useContext(RefContext);
+
   return (
     <main className="">
-      
-        <Header num_={"01"} heading_={"events"} />
-      
+      <div id="Events" ref={eventRef} className="h-[2rem]" />
+      <Header num_={"01"} heading_={"events"} />
 
       <section className="relative flex h-full flex-col items-center justify-center gap-4 p-5 md:flex-row ">
         {events.map((event, index) => (
-          <div key={index} className="group relative h-64 overflow-hidden rounded-sm">
+          <div
+            key={index}
+            className="group relative h-64 overflow-hidden rounded-sm"
+          >
             <img
               src={event.img_}
               alt="event_img"

@@ -1,15 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import { motion } from "framer-motion";
+import { RefContext } from "@/context/RefContext";
 
 const Navbar = () => {
+  const { homeRef, eventRef, galleryRef } = useContext(RefContext);
+
   const [scrolled, setScrolled] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
   const sections = ["Home", "Events", "Gallery"];
+  const refs = [homeRef, eventRef, galleryRef];
+
+  const handleHomeClick = () =>
+    homeRef.current.scrollIntoView({ behavior: "smooth" });
+  const handleEventClick = () =>
+    eventRef.current.scrollIntoView({ behavior: "smooth" });
+  const handleGalleryClick = () =>
+    galleryRef.current.scrollIntoView({ behavior: "smooth" });
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -60,15 +71,16 @@ const Navbar = () => {
           >
             &#9776;
           </button>
-          <nav className={`hidden space-x-6 md:flex`}>
+          <nav className={`hidden cursor-pointer space-x-6 md:flex`}>
             {sections.map((section, index) => (
-              <Link
+              <div
                 key={index}
-                href={`#${section}`}
-                className="duration-600 transition-colors hover:text-primary-green"
+                // href={`#${section}`}
+                onClick={() => refs[index].current.scrollIntoView()}
+                className="transition-all duration-500 hover:text-primary-green"
               >
                 {section}
-              </Link>
+              </div>
             ))}
           </nav>
         </div>
@@ -96,18 +108,19 @@ const Navbar = () => {
 
         <motion.nav
           initial={{ height: 0 }}
-          animate={isOpen ? { height: "" } : { height: 0 }} // replace 500px with the actual height of your dropdown menu
+          animate={isOpen ? { height: "" } : { height: 0 }} // "" means auto
           transition={{ duration: 0.6, ease: [0.04, 0.62, 0.23, 0.98] }}
-          className="flex min-w-full origin-top transform flex-col justify-center gap-y-3 overflow-hidden bg-transparent bg-opacity-30 text-2xl text-primary-white backdrop-blur-md backdrop-filter md:hidden"
+          className="flex min-w-full origin-top transform cursor-pointer flex-col justify-center gap-y-3 overflow-hidden bg-transparent bg-opacity-30 text-2xl backdrop-blur-md backdrop-filter md:hidden "
         >
           {sections.map((section, index) => (
-            <Link
+            <div
               key={index}
-              href={`#${section}`}
-              className="duration-400 self-center py-2 text-white transition-colors hover:text-green-400"
+              // href={`#${section}`}
+              onClick={() => refs[index].current.scrollIntoView()}
+              className="self-center py-2 text-white transition-all duration-500 hover:text-primary-green"
             >
               {section}
-            </Link>
+            </div>
           ))}
         </motion.nav>
       </header>

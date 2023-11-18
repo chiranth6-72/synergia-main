@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useState, useEffect, useContext } from "react";
 import ShiftingCountdown from "./Counter";
+import { RefContext } from "@/context/RefContext";
 
 const Hero = () => {
+  const { homeRef } = useContext(RefContext);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [toggle, setToggle] = useState(false);
 
@@ -53,9 +55,22 @@ const Hero = () => {
   }, [toggle]);
 
   return (
-    <main id="Home" className="relative">
-      <div className="duration-400 relative flex h-screen flex-col items-center justify-center gap-y-10 bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat font-red-hat-display text-primary-white transition-all">
-        {/* <button
+    <main id="Home" ref={homeRef} className="relative">
+      <div
+        className={`duration-400 relative flex h-screen flex-col items-center justify-center gap-y-10 bg-opacity-10 bg-[url('/bg/hero_mobile.png')] bg-cover bg-center bg-no-repeat font-red-hat-display text-primary-white transition-all md:bg-[url('/bg/hero.png')]`}
+      ></div>
+      <div className="absolute bottom-0 w-full">
+        <ShiftingCountdown />
+      </div>
+    </main>
+  );
+};
+
+export default Hero;
+
+// Previous Carousel
+{
+  /* <button
         className="duration-400 absolute left-5 top-[40%]  rounded-full p-3 transition-all hover:bg-slate-300 hover:bg-opacity-30"
         onClick={() => {
           changeSlide("prev");
@@ -90,13 +105,5 @@ const Hero = () => {
         >
           Explore{" "}
         </button>
-      </div> */}
-      </div>
-      <div className="absolute bottom-0 w-full">
-        <ShiftingCountdown />
-      </div>
-    </main>
-  );
-};
-
-export default Hero;
+      </div> */
+}
