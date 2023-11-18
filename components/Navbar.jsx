@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 import { RefContext } from "@/context/RefContext";
 
 const Navbar = () => {
-  const { homeRef, eventRef, galleryRef } = useContext(RefContext);
+  const { homeRef, eventRef, galleryRef, aboutRef } = useContext(RefContext);
 
   const [scrolled, setScrolled] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
-  const sections = ["Home", "Events", "Gallery"];
-  const refs = [homeRef, eventRef, galleryRef];
+  const sections = ["Home", "Events", "Gallery", "About"];
+  const refs = [homeRef, eventRef, galleryRef, aboutRef];
 
   const handleHomeClick = () =>
     homeRef.current.scrollIntoView({ behavior: "smooth" });

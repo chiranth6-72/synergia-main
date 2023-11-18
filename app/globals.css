@@ -13,6 +13,27 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
+@font-face {
+  font-family: "GINESCO-Regular";
+  src: url('/fonts/GinescoReg.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GINESCO-ExtBold";
+  src: url('/fonts/GinesoExtBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "All-Round-Gothic-Demi";
+  src: url('/fonts/GothicDemi.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "All-Round-Gothic-Demi-Book";
+  src: url('/fonts/GothicBook.otf') format('opentype');
+}
+
 .slideIn {
   animation: slideIn 0.9s ease-in both;
 }

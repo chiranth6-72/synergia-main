@@ -5,9 +5,9 @@ import { FaInstagram, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className="flex flex-col items-center justify-between gap-5 border-t border-primary-white border-opacity-20 py-10 md:flex-row md:px-[7rem]">
+      <footer className="flex flex-col justify-between gap-y-10 md:gap-5 border-t border-primary-white border-opacity-20 py-10 md:flex-row md:px-[7rem]">
         {/* LOGO */}
-        <Link href={"#top"} className="">
+        <Link href={"#top"} className="self-center ">
           <img className="w-[10rem] " src="/images/logo_white.png" alt="logo" />
         </Link>
 
@@ -26,18 +26,18 @@ const Footer = () => {
 
         {/* ADDRESS */}
 
-        <div className="flex flex-col items-center gap-y-4 md:items-start pt-3 md:pt-0">
+        <div className="flex flex-col items-center gap-y-4 pt-3 md:items-start md:pt-0">
           <h3 className="text-xl font-medium capitalize tracking-wide text-primary-white">
             Address <div className="mx-auto h-[1px] w-[92%] bg-primary-white" />
           </h3>
-          <div className="flex flex-col gap-y-1 text-sm text-slate-200 text-opacity-90 md:pl-1 items-center md:items-baseline">
+          <div className="flex flex-col items-center gap-y-1 text-sm text-slate-200 text-opacity-90 md:items-baseline md:pl-1">
             <p className="">Sahyadri Campus, Adyar,</p>
             <p className="">Mangaluru,Karnataka 575007</p>
           </div>
         </div>
 
         {/* SOCIAL MEDIA ICONS */}
-        <div className="flex items-center justify-start gap-x-5 py-4 md:py-0">
+        <div className="flex items-center justify-center md:justify-start gap-x-5 py-4 md:py-0">
           <Link
             href="https://instagram.com/synergia_sahyadri?igshid=OGQ5ZDc2ODk2ZA=="
             target="_blank"
@@ -46,11 +46,19 @@ const Footer = () => {
             <FaInstagram className="text-xl font-bold text-primary-black" />
           </Link>
 
-          <Link href="/" className="rounded-md bg-primary-green p-2">
+          <Link
+            href="https://www.facebook.com/profile.php?id=61553365303591&mibextid=ZbWKwL"
+            target="_blank"
+            className="rounded-md bg-primary-green p-2"
+          >
             <FaFacebookSquare className="text-xl font-bold text-primary-black" />
           </Link>
 
-          <Link href="/" className="rounded-md bg-primary-green p-2">
+          <Link
+            href="https://www.linkedin.com/company/synergia-sahyadri/"
+            target="_blank"
+            className="rounded-md bg-primary-green p-2"
+          >
             <FaLinkedin className="text-xl font-bold text-primary-black" />
           </Link>
         </div>

@@ -18,6 +18,10 @@ module.exports = {
       fontFamily: {
         "work-sans": ["Work Sans", "Helvetica", "sans-serif"],
         "red-hat-display": ["Red Hat Display", "sans-serif"],
+        "main-text": ["GINESCO-Regular","Work Sans", "Helvetica", "sans-serif"],
+        "sub-text-1": ["All-Round-Gothic-Demi", "Red Hat Display", "sans-serif"],
+        // "sub-text-2": ["", "Red Hat Display", "sans-serif"],
+        "date-text": ["GINESCO-ExtBold", "Work Sans", "Helvetica", "sans-serif"],
       },
       keyframes: {
         open: {

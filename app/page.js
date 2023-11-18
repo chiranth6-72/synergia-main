@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Gallery from "@/components/Gallery";
 import Context from "@/context/RefContext";
+import About from "@/components/About";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
           <Date />
           <Event />
           <Gallery />
+          <About />
           <Footer />
         </main>
       </Context>

@@ -9,7 +9,7 @@ const Header = ({ num_, heading_ }) => {
       {/* <div className="w-screen overflow-hidden py-3 text-center uppercase"> */}
       <section className="mt-20 w-full py-3 text-center uppercase ">
         <motion.p
-          className="mx-auto font-red-hat-display text-5xl font-bold text-primary-white "
+          className="font-main-text mx-auto text-5xl font-bold text-primary-white "
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
