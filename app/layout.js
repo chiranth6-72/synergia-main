@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Synergia",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "Synergia -  Where tech minds converge to spark innovation and drive the future.",
 };
 
 export default function RootLayout({ children }) {
