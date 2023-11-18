@@ -26,32 +26,25 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 0);
-  };
+  // const handleScroll = () => {
+  //   setScrolled(window.scrollY > 0);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    if (headerRef.current) {
-      // Set the height of the placeholder div to the height of the header
-      headerRef.current.previousSibling.style.height = `${headerRef.current.offsetHeight}px`;
-    }
-  }, [scrolled]);
 
   return (
     <>
-      <div className={`${scrolled ? " hidden md:block" : "hidden"}`} />
       <header
         id="top"
         ref={headerRef}
-        className="relative top-0 z-[100] w-full bg-opacity-30 px-5 font-semibold text-primary-white backdrop-blur-md backdrop-filter transition-all duration-[0.7s] md:fixed md:bg-transparent md:transition-all md:duration-[0.7s]"
+        className=" fixed top-0 z-[100] w-full bg-opacity-30 font-semibold text-primary-white backdrop-blur-md backdrop-filter transition-all duration-[0.7s] md:bg-transparent md:px-5 md:transition-all md:duration-[0.7s]"
 
         // className={`${
         //   scrolled
@@ -62,11 +55,14 @@ const Navbar = () => {
         <div
           className={`mx-auto flex w-[92%] items-center justify-between p-2`}
         >
-          <Link href={"#top"} className="flex w-[10rem] object-contain">
+          <Link
+            href={"#top"}
+            className="flex w-[7rem] object-contain md:w-[10rem]"
+          >
             <img src="/images/logo_white.png" alt="icon" />
           </Link>
           <button
-            className="cursor-pointer rounded-md bg-slate-300 px-3 py-1 text-2xl text-slate-600 md:hidden"
+            className="cursor-pointer rounded-md bg-opacity-90 px-3 py-1 text-lg text-slate-300  md:hidden"
             onClick={handleClick}
           >
             &#9776;

@@ -13,25 +13,42 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 1rem !important;
+  background-color: #cdff6b;
+}
+
+* {
+  scrollbar-width: medium;
+  scrollbar-color: #cdff6b;
+}
 
 @font-face {
   font-family: "GINESCO-Regular";
-  src: url('/fonts/GinescoReg.otf') format('opentype');
+  src: url("/fonts/GinescoReg.otf") format("opentype");
 }
 
 @font-face {
   font-family: "GINESCO-ExtBold";
-  src: url('/fonts/GinesoExtBold.otf') format('opentype');
+  src: url("/fonts/GinesoExtBold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "All-Round-Gothic-Demi";
-  src: url('/fonts/GothicDemi.otf') format('opentype');
+  src: url("/fonts/GothicDemi.otf") format("opentype");
 }
 
 @font-face {
   font-family: "All-Round-Gothic-Demi-Book";
-  src: url('/fonts/GothicBook.otf') format('opentype');
+  src: url("/fonts/GothicBook.otf") format("opentype");
 }
 
 .slideIn {
@@ -64,7 +81,7 @@
 
 .fadeOutBtn {
   animation: fadeBtn 0.5s ease both;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 @keyframes fadeBtn {
   0% {

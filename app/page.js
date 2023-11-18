@@ -7,14 +7,12 @@ import Gallery from "@/components/Gallery";
 import Context from "@/context/RefContext";
 import About from "@/components/About";
 
-
 export default function Home() {
-
   return (
     <>
       <Context>
+        <Navbar />
         <main className="bg-gradient-linear">
-          <Navbar />
           <Hero />
           <Date />
           <Event />
