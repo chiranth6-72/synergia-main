@@ -7,11 +7,15 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import { RefContext } from "@/context/RefContext";
 
+
 const Gallery = () => {
   const { galleryRef } = useContext(RefContext);
 
+
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [hover, setHover] = useState(false);
+  // const [image, setImage] = useState([]);
 
   const nextImage = () => {
     setCurrentImageIndex((currentImageIndex + 1) % images.length);
@@ -31,6 +35,7 @@ const Gallery = () => {
     return () => clearInterval(interval);
   }, [currentImageIndex, hover]);
 
+
   return (
     <main
       id=""
@@ -47,9 +52,9 @@ const Gallery = () => {
             onMouseOut={() => setHover(false)}
           >
             {images.map((image, index) => (
-              <Image
-                width={500}
-                height={500}
+              <img
+                // width={500}
+                // height={500}
                 key={index}
                 className={`absolute h-full w-full object-cover transition-all duration-500 ${
                   index === currentImageIndex ? "opacity-100" : "opacity-0"
